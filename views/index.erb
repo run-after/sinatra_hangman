@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+    body{
+      background: <%= 'red' if game_over == "You lose!" %>
+                  <%= 'green' if game_over == "You win!" %>
+    }
+    </style>
+  </head>
+  <body>
+    <p>
+      <h1>HANGCLOWN</h1>
+    </p>
+    <img src="photos/hang0.png" alt="">
+    <p>
+      Guesses left: <%= 6 - stick_man %>
+    </p>
+    <p>
+      Guess the word:
+      <br>
+      <%= guess %>
+      <% unless game_over %>
+      <form>
+        <input type='text' name='letter' />
+        <input type='submit' value='Guess!' />
+      </form>
+      <% end %>
+      <br>
+      <%= letter %>
+    </p>
+    <p>
+      <%= message %>
+    </p>
+    <p>
+      Wrong letters:
+      <br>
+      <%= missed %>
+      <br>
+      <% if game_over %>
+        GAME OVER!
+      <br>
+      <%=  game_over %>
+      <br>
+      <%= "Correct answer was: #{answer}" %>
+      <form action='/'><input type=submit value='Reload'/></form>
+      <% end %>
+    </p>   
+  </body>
+</html>
