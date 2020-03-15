@@ -9,7 +9,22 @@
   </head>
   <body>
       <h1>HANGCLOWN</h1>
-    <img src='https://i.postimg.cc/c4rnTs1K/hang<%= stick_man %>.png' alt=''>
+      <% if stick_man == 0 %>
+        <img src='https://i.postimg.cc/c4rnTs1K/hang0.png' alt=''>
+      <% elsif stick_man == 1 %>
+      <img src='https://i.postimg.cc/sXbvNWgv/hang1.png' alt=''>
+      <% elsif stick_man == 2 %>
+      <img src='https://i.postimg.cc/rscLsyhf/hang2.png' alt=''>
+      <% elsif stick_man == 3 %>
+      <img src='https://i.postimg.cc/kXzfvYCm/hang3.png' alt=''>
+      <% elsif stick_man == 4 %>
+      <img src='https://i.postimg.cc/GpJKrcyL/hang4.png' alt=''>
+      <% elsif stick_man == 5 %>
+      <img src='https://i.postimg.cc/4dW17BPj/hang5.png' alt=''>
+      <% elsif stick_man == 6 %>
+      <img src='https://i.postimg.cc/d3Xmn3zB/hang6.png' alt=''>
+      
+      <% end %>
     <p>
       Guesses left: <%= 6 - stick_man %>
     </p>
