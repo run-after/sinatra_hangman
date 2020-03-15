@@ -28,7 +28,7 @@ class Game
   attr_reader :progress
 
   def initialize
-    @answer = 'doggy'#Computer.new.word_selection
+    @answer = Computer.new.word_selection
     @guess = Player.new(@answer.length).guess
     @progress = {'answer' => @answer, 'guess' => @guess, 'round' => 1, 
     'stick_man' => 0, 'missed' => Array.new}
