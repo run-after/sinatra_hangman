@@ -35,13 +35,13 @@ class Game
   end
   
   def play
-    ### basically a group of pointers ###
+    
     round = progress['round']
     stick_man = progress['stick_man']
     missed = progress['missed']
     guess = progress['guess']
     answer = progress['answer']
-    #####################################
+    
     until stick_man == 6
 
       result = check_guess(letter)
@@ -69,7 +69,6 @@ class Game
     elsif stick_man == 6
       "You lose!"
     else
-      
       false
     end
   end
